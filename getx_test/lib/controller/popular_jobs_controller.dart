@@ -7,7 +7,7 @@ class PopularJobController extends GetxController {
   final selectedPageIndex = 0.obs;
   bool get isLastPage => selectedPageIndex.value == popularJobsList.length - 1;
   var pageController =
-      PageController(keepPage: true, initialPage: 0, viewportFraction: 0.7);
+      PageController(keepPage: true, initialPage: 0, viewportFraction: 0.8);
 
   nextPopularJobSelector() {
     if (isLastPage) {

@@ -5,7 +5,6 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:getx_test/components/classic_job_item.dart';
 import 'package:getx_test/components/popular_job_item.dart';
 import 'package:getx_test/controller/popular_jobs_controller.dart';
-
 import 'package:google_fonts/google_fonts.dart';
 
 int currentIndex = 0;
@@ -44,7 +43,15 @@ class _HomePageState extends State<HomePage> {
               Icons.menu_rounded,
               color: Colors.black,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Get.snackbar('Título', 'Mensaje',
+                  isDismissible: true,
+                  snackPosition: SnackPosition.BOTTOM,
+                  dismissDirection: SnackDismissDirection.HORIZONTAL,
+                  forwardAnimationCurve: Curves.easeInOutCubic,
+                  duration: 2400.milliseconds,
+                  barBlur: 4);
+            },
           ),
           actions: [
             IconButton(
@@ -82,13 +89,6 @@ class _HomePageState extends State<HomePage> {
                 flex: 10,
                 child: PageView.builder(
                   onPageChanged: _controller.selectedPageIndex,
-
-                  //(selectedIndex)
-                  // {
-                  //setState(() {
-                  //currentIndex = selectedIndex;
-                  //  });
-                  // },
                   controller: _controller.pageController,
                   itemCount: popularJobsList.length,
                   itemBuilder: (context, index) {

@@ -18,6 +18,7 @@ class _PopularJobItemState extends State<PopularJobItem> {
   Widget build(BuildContext context) {
     print('is selected value : ${widget.isSelected}');
     return Card(
+      // elevation: 4,
       clipBehavior: Clip.antiAlias,
       margin: EdgeInsets.symmetric(horizontal: 10),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
@@ -37,10 +38,10 @@ class _PopularJobItemState extends State<PopularJobItem> {
                     flex: 10,
                     child: Image.network(
                       widget.popularJob.companyLogo,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fitHeight,
                     ),
                   ),
-                  Expanded(flex: 2, child: Spacer()),
+                  Expanded(flex: 2, child: SizedBox.expand()),
                   Expanded(
                     flex: 10,
                     child: Center(
@@ -58,7 +59,7 @@ class _PopularJobItemState extends State<PopularJobItem> {
                 ],
               ),
             ),
-            Expanded(flex: 2, child: Spacer()),
+            Expanded(flex: 2, child: SizedBox.expand()),
             Expanded(
               flex: 10,
               child: Column(
@@ -70,7 +71,7 @@ class _PopularJobItemState extends State<PopularJobItem> {
                         color:
                             (widget.isSelected) ? Colors.white : Colors.black),
                   ),
-                  Spacer(),
+                  Expanded(flex: 2, child: SizedBox.expand()),
                   Row(
                     children: [
                       Text(

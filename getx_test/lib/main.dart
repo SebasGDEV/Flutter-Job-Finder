@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 import 'view/home_page.dart';
 
@@ -18,7 +19,7 @@ class ChambaDev extends StatefulWidget {
 class _ChambaDevState extends State<ChambaDev> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: 'home',
       routes: {
