@@ -16,7 +16,6 @@ class PopularJobItem extends StatefulWidget {
 class _PopularJobItemState extends State<PopularJobItem> {
   @override
   Widget build(BuildContext context) {
-    print('is selected value : ${widget.isSelected}');
     return Card(
       // elevation: 4,
       clipBehavior: Clip.antiAlias,

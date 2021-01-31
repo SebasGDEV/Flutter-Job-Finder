@@ -93,11 +93,15 @@ class _HomePageState extends State<HomePage> {
                   itemCount: popularJobsList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => PopularJobItem(
-                          _controller.selectedPageIndex.value == index
-                              ? true
-                              : false,
-                          popularJobsList[index]),
+                      () => GestureDetector(
+                        onTap: () =>
+                            print(popularJobsList[index].id.toString()),
+                        child: PopularJobItem(
+                            _controller.selectedPageIndex.value == index
+                                ? true
+                                : false,
+                            popularJobsList[index]),
+                      ),
                     );
                   },
                 ),
