@@ -35,9 +35,12 @@ class _PopularJobItemState extends State<PopularJobItem> {
                 children: [
                   Expanded(
                     flex: 10,
-                    child: Image.network(
-                      widget.popularJob.companyLogo,
-                      fit: BoxFit.fitHeight,
+                    child: Hero(
+                      tag: 'CompanyLogo',
+                      child: Image.network(
+                        widget.popularJob.companyLogo,
+                        fit: BoxFit.fitHeight,
+                      ),
                     ),
                   ),
                   Expanded(flex: 2, child: SizedBox.expand()),

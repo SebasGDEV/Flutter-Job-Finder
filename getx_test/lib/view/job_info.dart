@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 import 'package:getx_test/model/popular_job_mode.dart';
-import 'package:getx_test/view/home_page.dart';
 
 class JobInfo extends StatefulWidget {
   final JobModel jobinfo;
@@ -16,6 +14,7 @@ class JobInfo extends StatefulWidget {
 class _JobInfoState extends State<JobInfo> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -25,7 +24,9 @@ class _JobInfoState extends State<JobInfo> {
             Icons.arrow_back_ios_rounded,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         actions: [
           IconButton(
@@ -38,7 +39,30 @@ class _JobInfoState extends State<JobInfo> {
         ],
       ),
       body: Center(
-        child: Text('Jobinfo'),
+        child: Container(
+          width: size.width,
+          height: size.height,
+          child: Column(
+            children: [
+              Expanded(
+                flex: 10,
+                child: Container(
+                  child: Hero(
+                    tag: 'CompanyLogo',
+                    child: Image.network(
+                      widget.jobinfo.companyLogo,
+                      fit: BoxFit.fitHeight,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 10,
+                child: Text(widget.jobinfo.company),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

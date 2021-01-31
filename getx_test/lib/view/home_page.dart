@@ -97,12 +97,12 @@ class _HomePageState extends State<HomePage> {
                     return Obx(
                       () => GestureDetector(
                         onTap: () {
-                          print(
-                              'ID del trabajo es: ${popularJobsList[index].id.toString()}');
                           showBarModalBottomSheet(
                             context: context,
                             expand: true,
-                            builder: (context) => JobInfo(),
+                            builder: (_) => JobInfo(
+                              jobinfo: popularJobsList[index],
+                            ),
                           );
                         },
                         child: PopularJobItem(
