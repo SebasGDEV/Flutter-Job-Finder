@@ -4,8 +4,10 @@ import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:getx_test/components/classic_job_item.dart';
 import 'package:getx_test/components/popular_job_item.dart';
-import 'package:getx_test/controller/popular_jobs_controller.dart';
+import 'package:getx_test/controller/job_controller.dart';
+import 'package:getx_test/view/job_info.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 int currentIndex = 0;
 PopularJobController _controller = Get.put(PopularJobController());
@@ -94,8 +96,15 @@ class _HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     return Obx(
                       () => GestureDetector(
-                        onTap: () =>
-                            print(popularJobsList[index].id.toString()),
+                        onTap: () {
+                          print(
+                              'ID del trabajo es: ${popularJobsList[index].id.toString()}');
+                          showBarModalBottomSheet(
+                            context: context,
+                            expand: true,
+                            builder: (context) => JobInfo(),
+                          );
+                        },
                         child: PopularJobItem(
                             _controller.selectedPageIndex.value == index
                                 ? true
@@ -119,9 +128,9 @@ class _HomePageState extends State<HomePage> {
               Expanded(
                 flex: 18,
                 child: ListView.builder(
-                  itemCount: popularJobsList.length,
+                  itemCount: normalJobList.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ClassicJobItem(popularJobsList[index]);
+                    return ClassicJobItem(normalJobList[index]);
                   },
                 ),
               ),

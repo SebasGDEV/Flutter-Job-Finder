@@ -18,17 +18,17 @@ class PopularJobController extends GetxController {
   }
 }
 
-List<PopularJobModel> popularJobsList = [
-  PopularJobModel(
+List<JobModel> normalJobList = [
+  JobModel(
     id: 1,
-    name: 'Mechatronics Engineer',
-    salary: '\$130k per year',
+    name: 'Normal Engineer',
+    salary: '\$4000k per year',
     company: 'Duffenshmirtz Evil Co.',
     companyLogo:
         'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     daysRemaining: 5,
   ),
-  PopularJobModel(
+  JobModel(
     id: 2,
     name: 'Puta profesional',
     salary: '\$180k per year',
@@ -37,7 +37,7 @@ List<PopularJobModel> popularJobsList = [
         'https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600',
     daysRemaining: 10,
   ),
-  PopularJobModel(
+  JobModel(
     id: 3,
     name: 'Mechatronics Engineer',
     salary: '\$130k per year',
@@ -46,7 +46,46 @@ List<PopularJobModel> popularJobsList = [
         'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600',
     daysRemaining: 5,
   ),
-  PopularJobModel(
+  JobModel(
+    id: 4,
+    name: 'Mechatronics Engineer',
+    salary: '\$130k per year',
+    company: 'Duffenshmirtz Evil Co.',
+    companyLogo:
+        'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    daysRemaining: 5,
+  ),
+];
+
+List<JobModel> popularJobsList = [
+  JobModel(
+    id: 1,
+    name: 'Mechatronics Engineer',
+    salary: '\$130k per year',
+    company: 'Duffenshmirtz Evil Co.',
+    companyLogo:
+        'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    daysRemaining: 5,
+  ),
+  JobModel(
+    id: 2,
+    name: 'Puta profesional',
+    salary: '\$180k per year',
+    company: 'El Dragón Rojo GmbH Co.',
+    companyLogo:
+        'https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600',
+    daysRemaining: 10,
+  ),
+  JobModel(
+    id: 3,
+    name: 'Mechatronics Engineer',
+    salary: '\$130k per year',
+    company: 'Duffenshmirtz Evil Co.',
+    companyLogo:
+        'https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=600',
+    daysRemaining: 5,
+  ),
+  JobModel(
     id: 4,
     name: 'Mechatronics Engineer',
     salary: '\$130k per year',

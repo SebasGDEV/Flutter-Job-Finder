@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ClassicJobItem extends StatefulWidget {
   @required
-  final PopularJobModel popularJob;
+  final JobModel popularJob;
 
   ClassicJobItem(this.popularJob);
 

@@ -1,4 +1,4 @@
-class PopularJobModel {
+class JobModel {
   int id;
   String name;
   String salary;
@@ -6,7 +6,7 @@ class PopularJobModel {
   String companyLogo;
   int daysRemaining;
 
-  PopularJobModel(
+  JobModel(
       {this.id,
       this.name,
       this.salary,

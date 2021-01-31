@@ -5,7 +5,7 @@ class PopularJobItem extends StatefulWidget {
   @required
   final bool isSelected;
   @required
-  final PopularJobModel popularJob;
+  final JobModel popularJob;
 
   PopularJobItem(this.isSelected, this.popularJob);
 
