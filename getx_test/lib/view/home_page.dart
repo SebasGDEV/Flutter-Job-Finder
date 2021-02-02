@@ -36,9 +36,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey[200],
           elevation: 0,
           leading: IconButton(
             icon: Icon(
@@ -98,12 +98,17 @@ class _HomePageState extends State<HomePage> {
                       () => GestureDetector(
                         onTap: () {
                           showBarModalBottomSheet(
+                            animationCurve: Curves.easeOutCirc,
+                            duration: 600.milliseconds,
                             context: context,
                             expand: true,
                             builder: (_) => JobInfo(
-                              jobinfo: popularJobsList[index],
+                              jobInfo: popularJobsList[index],
                             ),
                           );
+                          // Get.to(JobInfo(
+                          //   jobInfo: popularJobsList[index],
+                          // ));
                         },
                         child: PopularJobItem(
                             _controller.selectedPageIndex.value == index

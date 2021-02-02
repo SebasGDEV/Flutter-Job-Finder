@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_test/constants.dart';
 import 'package:getx_test/model/popular_job_mode.dart';
 
 class PopularJobItem extends StatefulWidget {
@@ -23,7 +24,7 @@ class _PopularJobItemState extends State<PopularJobItem> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: AnimatedContainer(
         duration: Duration(milliseconds: 400),
-        color: (widget.isSelected) ? Colors.black : Colors.grey[200],
+        color: (widget.isSelected) ? Colors.black : Colors.white,
         width: 250,
         height: 100,
         padding: EdgeInsets.all(25),
@@ -36,7 +37,7 @@ class _PopularJobItemState extends State<PopularJobItem> {
                   Expanded(
                     flex: 10,
                     child: Hero(
-                      tag: 'CompanyLogo',
+                      tag: 'CompanyLogo' + widget.popularJob.id.toString(),
                       child: Image.network(
                         widget.popularJob.companyLogo,
                         fit: BoxFit.fitHeight,
