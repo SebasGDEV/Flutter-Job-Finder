@@ -64,12 +64,15 @@ class _JobInfoState extends State<JobInfo> {
                 Expanded(
                   flex: 100,
                   child: Container(
-                    child: Hero(
-                      tag: 'CompanyLogo' + widget.jobInfo.id.toString(),
-                      child: Image.network(
-                        widget.jobInfo.companyLogo,
-                        fit: BoxFit.fitHeight,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
                       ),
+                    ),
+                    child: Image.network(
+                      widget.jobInfo.companyLogo,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -141,13 +144,39 @@ class _JobInfoState extends State<JobInfo> {
                 Expanded(
                   flex: 5,
                   child: Container(
-                    color: Colors.pink,
+                    child: Text('Description'),
                   ),
                 ),
                 Expanded(
-                  flex: 5,
-                  child: Container(
-                    color: Colors.pink,
+                  flex: 40,
+                  child: Text.rich(
+                    TextSpan(
+                        text:
+                            'El equipo de desarrollo de michelada.io está contratando personas con experiencia programando Ruby, con la habilidad de ser autosuficientes, que les guste colaborar y enseñar a otras personas, que busquen hacer una diferencia en su lugar de trabajo y que sean un apoyo para que nuestro equipo crezca y vaya por un camino mas solido.'),
+                  ),
+                ),
+                Expanded(
+                  flex: 40,
+                  child: Text.rich(
+                    TextSpan(
+                        text:
+                            'El equipo de desarrollo de michelada.io está contratando personas con experiencia programando Ruby, con la habilidad de ser autosuficientes, que les guste colaborar y enseñar a otras personas, que busquen hacer una diferencia en su lugar de trabajo y que sean un apoyo para que nuestro equipo crezca y vaya por un camino mas solido.'),
+                  ),
+                ),
+                Expanded(
+                  flex: 40,
+                  child: Text.rich(
+                    TextSpan(
+                        text:
+                            'El equipo de desarrollo de michelada.io está contratando personas con experiencia programando Ruby, con la habilidad de ser autosuficientes, que les guste colaborar y enseñar a otras personas, que busquen hacer una diferencia en su lugar de trabajo y que sean un apoyo para que nuestro equipo crezca y vaya por un camino mas solido.'),
+                  ),
+                ),
+                Expanded(
+                  flex: 40,
+                  child: Text.rich(
+                    TextSpan(
+                        text:
+                            'El equipo de desarrollo de michelada.io está contratando personas con experiencia programando Ruby, con la habilidad de ser autosuficientes, que les guste colaborar y enseñar a otras personas, que busquen hacer una diferencia en su lugar de trabajo y que sean un apoyo para que nuestro equipo crezca y vaya por un camino mas solido.'),
                   ),
                 ),
                 Expanded(
